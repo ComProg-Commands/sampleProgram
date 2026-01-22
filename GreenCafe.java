@@ -1,6 +1,6 @@
 import java.util.Scanner;
 class GreenCafe{
-    int choice, Latte,Temperature, initialprice, finalprice;;
+    int choice, Latte, Temperature, initialprice, finalprice, custOrd;
 
     public GreenCafe(){
         initialprice = 50;
@@ -26,10 +26,9 @@ class GreenCafe{
         }
         return;
     }
-
-    public void order(int choice){
-        while (true){
-            if (choice == 1){
+    public void customizeorder(int custOrd){
+         while (true){
+            if (custOrd == 0){
                 System.out.println("-- Alright!");
                 Latte();
                 Temperature();
@@ -40,6 +39,23 @@ class GreenCafe{
                 System.out.println("\n! The amount to pay is " + finalprice);
             }else {
                 System.out.println("\n-- Thank you! \n! The amount to pay is " + initialprice);
+                break;
+            }
+            break;
+        }
+    }
+    public void order(int choice){
+        while (true){
+            if (choice == 1){
+                System.out.println("-- Currently Ordering Americano!");
+                System.out.println("Would you like to customize your order(0 for yes, 1 for no)?");
+                custOrd = s.nextInt();
+                customizeorder(custOrd);
+            }else {
+                System.out.println("-- Currently Ordering Matcha!");
+                System.out.println("Would you like to customize your order(0 for yes, 1 for no)?");
+                custOrd = s.nextInt();
+                customizeorder(custOrd);
                 break;
             }
             break;

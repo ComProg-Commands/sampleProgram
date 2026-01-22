@@ -5,8 +5,10 @@ public class GreenCafeOp{
         GreenCafe g = new GreenCafe();
         
         System.out.println("\n Hello, Welcome!");
-        System.out.println("-- You are currently ordering matcha!");
-        System.out.print("\nWould you like to order plain matcha(0 for yes, 1 for no)? ");
+        System.out.println("-- KAPEHAN NI ABA MINUE:");
+        System.out.println("\n1. Americano \n2. Matcha ");
+        System.out.print("what would you like to order? ");
+
         g.order(s.nextInt());
 
         s.close();
