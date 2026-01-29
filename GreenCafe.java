@@ -26,7 +26,7 @@ class GreenCafe{
         }
         return;
     }
-    public void customizeorder(int custOrd){
+    public void customizeorder(int custOrd, int choice){
          while (true){
             if (custOrd == 0){
                 System.out.println("\n-- Alright!");
@@ -50,12 +50,12 @@ class GreenCafe{
                 System.out.println("\n-- Currently Ordering Americano!");
                 System.out.print("Would you like to customize your order(0 for yes, 1 for no)? ");
                 custOrd = s.nextInt();
-                customizeorder(custOrd);
+                customizeorder(custOrd, choice);
             }else {
                 System.out.println("\n-- Currently Ordering Matcha!");
                 System.out.print("Would you like to customize your order(0 for yes, 1 for no)? ");
                 custOrd = s.nextInt();
-                customizeorder(custOrd);
+                customizeorder(custOrd, choice);
                 break;
             }
             break;
