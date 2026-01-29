@@ -29,11 +29,11 @@ class GreenCafe{
     public void customizeorder(int custOrd){
          while (true){
             if (custOrd == 0){
-                System.out.println("-- Alright!");
+                System.out.println("\n-- Alright!");
                 Latte();
                 Temperature();
                 System.out.println("\n-- Thank you!");
-                System.out.println("Your order: " 
+                System.out.println("Your order: " + (choice == 1 ? "Americano" : "Matcha") + ", "
                 + (Latte == 1 ? "Latte" : "Regular") + ", "
                 + (Temperature == 0 ? "Hot" : "Cold"));
                 System.out.println("\n! The amount to pay is " + finalprice);
@@ -47,13 +47,13 @@ class GreenCafe{
     public void order(int choice){
         while (true){
             if (choice == 1){
-                System.out.println("-- Currently Ordering Americano!");
-                System.out.println("Would you like to customize your order(0 for yes, 1 for no)?");
+                System.out.println("\n-- Currently Ordering Americano!");
+                System.out.print("Would you like to customize your order(0 for yes, 1 for no)? ");
                 custOrd = s.nextInt();
                 customizeorder(custOrd);
             }else {
-                System.out.println("-- Currently Ordering Matcha!");
-                System.out.println("Would you like to customize your order(0 for yes, 1 for no)?");
+                System.out.println("\n-- Currently Ordering Matcha!");
+                System.out.print("Would you like to customize your order(0 for yes, 1 for no)? ");
                 custOrd = s.nextInt();
                 customizeorder(custOrd);
                 break;
